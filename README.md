@@ -1,6 +1,8 @@
 # rugged_environments
 A repository to house challenging simulation environments.
 
+Currently this repository houses maps from the ICRA 2024 Quadruped challenge [here](https://github.com/teamgrit-lab/ICRA2024_Quadruped_Robot_Challenges/tree/c7437c0af517b24c29db77dd373cd3371c98df43). These maps are provided as a ROS1 package, so this repository provides code to wrap this and make URDF files that can be used outside of ROS with paths for meshes that work.
+
 ## Pybullet
 
 This is currently the only provided example.
