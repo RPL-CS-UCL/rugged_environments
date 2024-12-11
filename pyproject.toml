@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rugged_environments"
+version = "0.0.1"
+authors = [
+  { name="MZandtheRaspberryPi", email="MZandtheRaspberryPi@gmail.com" },
+]
+description = "A repository to house challenging simulation environments."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rugged_environments.models*", "rugged_environments.pybullet*", "rugged_environments.common*", "rugged_environments.__init__*"]
+exclude = ["rugged_environments/ICRA2024_Quadruped_Robot_Challenges/ieee-qrc-2024-device_code/*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+rugged_environments = ["rugged_environments.ICRA2024_Quadruped_Robot_Challenges.ICRA2024_QRC_Simulation_Map.meshes.*.*.obj"]
+
+[project.urls]
+Homepage = "https://github.com/RPL-CS-UCL/rugged_environments"
+Issues = "https://github.com/RPL-CS-UCL/rugged_environments/issues"
